@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+p,
+button,
+dialog, 
+input {
+    font-family: "Playfair Display", serif;
+}
+
+.book-card
+p {
+    margin-top: -1.5rem;
+}
+
+.header-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(183, 183, 209);
+    padding: 2rem ;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    width: 8rem;
+    margin-top: -2rem;
+    margin-left: -1rem;
+    display: block;
+}
+
+h1 {
+    margin-left: -2.5rem;
+}
+
+main {
+    background-color: #8B5A2B;
+    padding-top: 2.5rem ;
+}
+
+dialog {
+    width: 85%;
+    max-width: 450px;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+    width: 80%;
+    max-width: 380px;
+    padding: 0.4rem;
+    margin: 6px 0 9px 0;
+    border: 1px solid gray;
+    border-radius: 0.3rem;
+}
+
+input:user-invalid {
+    border: 1px solid red;
+    outline: none;
+}
+
+.read-option {
+    display: flex;
+    padding: 0.3rem;
+}
+
+input[type="radio"] {
+    position: absolute;
+}
+
+.btn-close-dialog {
+    display: block;
+    margin-left: auto;
+    margin-top: -1rem;
+    border: none;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+form button {
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1.3rem;
+    border: none;
+    color: white;
+    background-color: #12A0D7;
+    align-self: center;
+}
+
+.btn-add-book {
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 3.1rem;
+    border: none;
+    background-color: #12A0D7;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0.2rem 0.4rem 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.books-contain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+    justify-items: center;
+    background-color: #8B5A2B;
+    min-height: 100vh;
+}
+
+.book-card {
+    background-color: #fdfbf7;
+    height: 250px;
+    width: 260px;
+    border-radius: 0 1rem 1rem 0 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 1rem;
+    box-shadow: 10px 9px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-contain {
+    display: flex;
+    align-items: flex-end;
+}
+
+.btn-status,
+.btn-remove {
+    align-self: center;
+    border-radius: 0.5rem;
+    border: none;
+    width: 9rem;
+    padding: 0.4rem;
+}
+
+.btn-remove {
+    background-color: rgb(183, 183, 209);
+}
+
+.btn-status {
+    margin-bottom: -1.2rem;
+}
+
+.unread {
+    background-color: red;
+}
+
+.read {
+    background-color: green;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 2px 3px 4px rgb(52, 52, 53);
+    transform: translateY(3px);
+}
